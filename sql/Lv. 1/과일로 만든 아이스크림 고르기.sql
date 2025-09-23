@@ -12,5 +12,5 @@
 -- INGREDIENT_TYPE	VARCHAR(N)	FALSE
 -- 문제
 -- 상반기 아이스크림 총주문량이 3,000보다 높으면서 아이스크림의 주 성분이 과일인 아이스크림의 맛을 총주문량이 큰 순서대로 조회하는 SQL 문을 작성해주세요.
--- -- 코드를 입력하세요
-SELECT DR_NAME,	DR_ID,	MCDP_CD, date_format(HIRE_YMD,'%Y-%m-%d') from doctor where mcdp_cd = "cs" or mcdp_cd = "gs" order by hire_ymd desc, DR_NAME
+-- 코드를 입력하세요
+SELECT flavor from first_half natural join icecream_info where total_order > 3000 and INGREDIENT_TYPE = 'fruit_based' order by total_order desc
