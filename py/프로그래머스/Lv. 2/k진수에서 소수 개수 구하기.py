@@ -23,4 +23,3 @@ def solution(n, k):
 
 print("답: ",solution(437674,	3	))
 print("답: ",solution(110011,	10		))
-# print("답: ",solution([1, 1, 9, 1, 1, 1],	0	))
